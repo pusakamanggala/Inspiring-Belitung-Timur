@@ -36,6 +36,15 @@ const BottomBar = () => {
       return require('../icons/BottomBar/information.png');
     }
   };
+
+  const handleIconOthers = () => {
+    if (route.name === 'Others') {
+      return require('../icons/BottomBar/other_active.png');
+    } else {
+      return require('../icons/BottomBar/other.png');
+    }
+  };
+
   // const [icon, setIcon] = React.useState(0);
 
   // const handleIconHome = () => {
@@ -74,7 +83,6 @@ const BottomBar = () => {
             <Text style={styles.iconTitle}>Beranda</Text>
           </View>
         </TouchableOpacity>
-        <View></View>
       </View>
 
       <View style={styles.iconContainer}>
@@ -88,24 +96,32 @@ const BottomBar = () => {
             <Text style={styles.iconTitle}>Destinasi</Text>
           </View>
         </TouchableOpacity>
-        <View></View>
       </View>
 
       <View style={styles.iconContainer}>
-        <View style={styles.icon}>
-          <Image source={require('../icons/BottomBar/information.png')} />
-        </View>
-        <View>
-          <Text style={styles.iconTitle}>Informasi</Text>
-        </View>
+        <TouchableOpacity
+          style={{borderRadius: 20}}
+          onPress={() => {
+            navigation.navigate('Informations');
+          }}>
+          <View style={styles.icon}>
+            <Image source={handleIconInformations()} />
+            <Text style={styles.iconTitle}>Informasi</Text>
+          </View>
+        </TouchableOpacity>
       </View>
+
       <View style={styles.iconContainer}>
-        <View style={styles.icon}>
-          <Image source={require('../icons/BottomBar/other.png')} />
-        </View>
-        <View>
-          <Text style={styles.iconTitle}>Lainnya</Text>
-        </View>
+        <TouchableOpacity
+          style={{borderRadius: 20}}
+          onPress={() => {
+            navigation.navigate('Others');
+          }}>
+          <View style={styles.icon}>
+            <Image source={handleIconOthers()} />
+            <Text style={styles.iconTitle}>Lainnya</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

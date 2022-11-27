@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 
-const TopBar = () => {
+const TopBar = props => {
   return (
     <View
       style={{
@@ -16,7 +16,7 @@ const TopBar = () => {
       }}>
       <View>
         <Text style={{fontSize: 20, fontWeight: '500', color: '#4B5563'}}>
-          Destinasi
+          {props.title}
         </Text>
       </View>
       <View
@@ -26,14 +26,8 @@ const TopBar = () => {
           width: '18%',
           alignItems: 'center',
         }}>
-        <Image
-          style={{width: 20, height: 20}}
-          source={require('../icons/TopBar/search.png')}
-        />
-        <Image
-          style={{width: 20, height: 20}}
-          source={require('../icons/TopBar/map.png')}
-        />
+        <Image style={{width: 20, height: 20}} source={props.path} />
+        <Image style={{width: 20, height: 20}} source={props.path2} />
       </View>
     </View>
   );

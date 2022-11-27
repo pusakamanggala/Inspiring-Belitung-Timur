@@ -1,7 +1,10 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
+import NewsList from './NewsList';
+import {useNavigation} from '@react-navigation/native';
 
 const News = () => {
+  const navigation = useNavigation();
   return (
     <View style={{width: '90%'}}>
       <View style={{padding: 20, marginBottom: 15}}>
@@ -43,26 +46,10 @@ const News = () => {
           color: '#0085CC',
           marginTop: 30,
           marginBottom: 50,
-        }}>
+        }}
+        onPress={() => navigation.navigate('Informations')}>
         Informasi Lainnya
       </Text>
-    </View>
-  );
-};
-
-const NewsList = props => {
-  return (
-    <View style={{borderTopWidth: 1.5, borderTopColor: '#E0E0E0'}}>
-      <View style={{marginVertical: 20, flexDirection: 'row'}}>
-        <Image
-          style={{borderRadius: 10, overflow: 'hidden'}}
-          source={props.path}
-        />
-        <View style={{marginLeft: 15, width: '80%'}}>
-          <Text style={{fontSize: 18, color: '#1F2937'}}>{props.title}</Text>
-          <Text style={{color: '#9096A0'}}>{props.date}</Text>
-        </View>
-      </View>
     </View>
   );
 };

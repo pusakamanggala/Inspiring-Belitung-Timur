@@ -7,7 +7,11 @@ import BottomBar from '../components/BottomBar';
 const DestinationsPage = () => {
   return (
     <View style={{backgroundColor: 'white', paddingBottom: 50}}>
-      <TopBar />
+      <TopBar
+        title="Destinasi"
+        path={require('../icons/TopBar/search.png')}
+        path2={require('../icons/TopBar/map.png')}
+      />
       <ScrollView horizontal={true}>
         <View
           style={{

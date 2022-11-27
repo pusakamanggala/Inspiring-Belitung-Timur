@@ -6,7 +6,7 @@ const MainTopBar = () => {
     <View
       style={{
         justifyContent: 'center',
-        height: '10%',
+        height: '10.4%',
         borderBottomWidth: 2,
         borderBottomColor: 'rgba(158, 150, 150, 0.3)',
       }}>
@@ -33,7 +33,7 @@ const MainTopBar = () => {
           />
         </View>
         <View style={{flex: 1, alignItems: 'center'}}>
-          <Image style={{}} source={require('../icons/TopBar/love.png')} />
+          <Image source={require('../icons/TopBar/love.png')} />
         </View>
       </View>
     </View>
