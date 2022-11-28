@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const TopBar = props => {
+const AltTopBar = props => {
   const navigation = useNavigation();
   return (
     <View
@@ -21,28 +21,19 @@ const TopBar = props => {
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Image
-          style={props.backIconStyle}
-          source={props.backIcon}
-          onPress={() => navigation.goBack()}
-        />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image
+            style={{marginRight: 30, width: 21, height: 20}}
+            source={require('../icons/TopBar/back.png')}
+          />
+        </TouchableOpacity>
 
         <Text style={{fontSize: 20, fontWeight: '500', color: '#4B5563'}}>
           {props.title}
         </Text>
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          width: '18%',
-          alignItems: 'center',
-        }}>
-        <Image style={{width: 20, height: 20}} source={props.path} />
-        <Image style={{width: 20, height: 20}} source={props.path2} />
-      </View>
     </View>
   );
 };
 
-export default TopBar;
+export default AltTopBar;

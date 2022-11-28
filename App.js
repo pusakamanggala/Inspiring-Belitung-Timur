@@ -1,13 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
 import HomePage from './pages/HomePage';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DestinationsPage from './pages/DestinationsPage';
-import BottomBar from './components/BottomBar';
 import InformationsPage from './pages/InformationsPage';
 import OthersPage from './pages/OthersPage';
+import AboutPage from './pages/AboutPage';
+import FavDestinationsPage from './pages/FavDestinationsPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +22,8 @@ const App = () => {
         <Stack.Screen name="Destinations" component={DestinationsPage} />
         <Stack.Screen name="Informations" component={InformationsPage} />
         <Stack.Screen name="Others" component={OthersPage} />
+        <Stack.Screen name="About" component={AboutPage} />
+        <Stack.Screen name="FavDestinations" component={FavDestinationsPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

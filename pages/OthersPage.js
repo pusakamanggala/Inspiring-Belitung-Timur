@@ -2,8 +2,10 @@ import React from 'react';
 import {View, Image, Text} from 'react-native';
 import BottomBar from '../components/BottomBar';
 import {StyleSheet} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const OthersPage = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <View style={{height: '90.3%'}}>
@@ -26,10 +28,18 @@ const OthersPage = () => {
           </View>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.text}>Tentang</Text>
+          <Text
+            style={styles.text}
+            onPress={() => navigation.navigate('About')}>
+            Tentang
+          </Text>
         </View>
         <View style={styles.textContainer}>
-          <Text style={styles.text}>Favorit Destinasi</Text>
+          <Text
+            style={styles.text}
+            onPress={() => navigation.navigate('FavDestinations')}>
+            Favorit Destinasi
+          </Text>
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.text}>Kritik dan Saran</Text>
