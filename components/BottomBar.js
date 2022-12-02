@@ -45,29 +45,11 @@ const BottomBar = () => {
     }
   };
 
-  // const [icon, setIcon] = React.useState(0);
-
-  // const handleIconHome = () => {
-  //   if (icon === 0) {
-  //     return require('../icons/BottomBar/home.png');
-  //   } else {
-  //     return require('../icons/BottomBar/home_active.png');
-  //   }
-  // };
-
-  // const handleIconDestinations = () => {
-  //   if (icon === 0) {
-  //     return require('../icons/BottomBar/destinations.png');
-  //   } else {
-  //     return require('../icons/BottomBar/destinations_active.png');
-  //   }
-  // };
-
   return (
     <View
       style={{
         flexDirection: 'row',
-        height: 80,
+        height: '10%',
         width: '100%',
         justifyContent: 'space-evenly',
         borderTopColor: 'rgba(158, 150, 150, 0.3)',

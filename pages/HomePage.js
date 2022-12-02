@@ -80,9 +80,10 @@ const HomePage = ({navigation}) => {
           {/* App Menu */}
           <View
             style={{
-              width: '90%',
+              width: '100%',
               alignItems: 'center',
               alignContent: 'center',
+              justifyContent: 'center',
             }}>
             <Category />
           </View>

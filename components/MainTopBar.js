@@ -6,7 +6,7 @@ const MainTopBar = () => {
     <View
       style={{
         justifyContent: 'center',
-        height: '10.4%',
+        height: '10%',
         borderBottomWidth: 2,
         borderBottomColor: 'rgba(158, 150, 150, 0.3)',
       }}>

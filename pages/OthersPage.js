@@ -8,7 +8,7 @@ const OthersPage = () => {
   const navigation = useNavigation();
   return (
     <View>
-      <View style={{height: '90.3%'}}>
+      <View style={{height: '90%'}}>
         <View
           style={{
             flexDirection: 'row',
@@ -37,7 +37,7 @@ const OthersPage = () => {
         <View style={styles.textContainer}>
           <Text
             style={styles.text}
-            onPress={() => navigation.navigate('FavDestinations')}>
+            onPress={() => navigation.navigate('FavoriteDestinations')}>
             Favorit Destinasi
           </Text>
         </View>

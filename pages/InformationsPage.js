@@ -8,7 +8,7 @@ const InformationsPage = () => {
   return (
     <>
       <TopBar title="Informasi dan Berita" />
-      <ScrollView style={{paddingHorizontal: 20, height: '80%'}}>
+      <ScrollView style={{paddingHorizontal: 20, height: '95%'}}>
         <View style={{borderBottomWidth: 1.5, borderBottomColor: '#E0E0E0'}}>
           <NewsList
             style={{borderTopWidth: 0, borderTopColor: '#E0E0E0'}}

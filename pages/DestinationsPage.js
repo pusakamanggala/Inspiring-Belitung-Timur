@@ -6,13 +6,13 @@ import BottomBar from '../components/BottomBar';
 
 const DestinationsPage = () => {
   return (
-    <View style={{backgroundColor: 'white', paddingBottom: 50}}>
+    <View style={{backgroundColor: 'white'}}>
       <TopBar
         title="Destinasi"
         path={require('../icons/TopBar/search.png')}
         path2={require('../icons/TopBar/map.png')}
       />
-      <ScrollView horizontal={true}>
+      <ScrollView horizontal={true} style={{height: '5%'}}>
         <View
           style={{
             flexDirection: 'row',
@@ -24,7 +24,6 @@ const DestinationsPage = () => {
             style={{
               color: '#0085CC',
               backgroundColor: '#EBF5FF',
-              padding: 5,
               borderRadius: 8,
               marginHorizontal: 25,
             }}>
@@ -43,7 +42,7 @@ const DestinationsPage = () => {
       </ScrollView>
       <ScrollView
         style={{
-          height: '80%',
+          height: '75%',
         }}>
         {/* Row 1 */}
         <View

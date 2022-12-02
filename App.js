@@ -7,26 +7,13 @@ import InformationsPage from './pages/InformationsPage';
 import OthersPage from './pages/OthersPage';
 import AboutPage from './pages/AboutPage';
 import FavDestinationsPage from './pages/FavDestinationsPage';
+import DetailDestinationPage from './pages/DetailDestinationPage';
+import Route from './router/Router';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          animation: 'none',
-        }}>
-        <Stack.Screen name="Home" component={HomePage} />
-        <Stack.Screen name="Destinations" component={DestinationsPage} />
-        <Stack.Screen name="Informations" component={InformationsPage} />
-        <Stack.Screen name="Others" component={OthersPage} />
-        <Stack.Screen name="About" component={AboutPage} />
-        <Stack.Screen name="FavDestinations" component={FavDestinationsPage} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <Route />;
 };
 
 export default App;
