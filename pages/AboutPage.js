@@ -1,6 +1,4 @@
 import React from 'react';
-import TopBar from '../components/TopBar';
-import {StyleSheet} from 'react-native';
 import AltTopBar from '../components/AltTopBar';
 import {Text, View} from 'react-native';
 
