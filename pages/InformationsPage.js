@@ -3,14 +3,17 @@ import {ScrollView, View} from 'react-native';
 import TopBar from '../components/TopBar';
 import NewsList from '../components/NewsList';
 import BottomBar from '../components/BottomBar';
+import {useNavigation} from '@react-navigation/native';
 
 const InformationsPage = () => {
+  const navigation = useNavigation();
   return (
     <>
       <TopBar title="Informasi dan Berita" />
       <ScrollView style={{paddingHorizontal: 20, height: '95%'}}>
         <View style={{borderBottomWidth: 1.5, borderBottomColor: '#E0E0E0'}}>
           <NewsList
+            onPress={() => navigation.navigate('NewsDetailPage')}
             style={{borderTopWidth: 0, borderTopColor: '#E0E0E0'}}
             path={require('../img/News/kerjurkab.png')}
             title="Adakan Kerjurkab Tinju 2022"
