@@ -23,6 +23,7 @@ const News = () => {
       </View>
       <View style={{borderBottomWidth: 1.5, borderBottomColor: '#E0E0E0'}}>
         <NewsList
+          onPress={() => navigation.navigate('NewsDetailPage')}
           path={require('../img/News/kerjurkab.png')}
           title="Adakan Kerjurkab Tinju 2022"
           date="20 Oktober 2021"
