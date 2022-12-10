@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 
 const MainTopBar = () => {
   const navigation = useNavigation();
+  
   return (
     <View
       style={{

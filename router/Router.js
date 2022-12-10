@@ -8,6 +8,7 @@ import OthersPage from '../pages/OthersPage';
 import AboutPage from '../pages/AboutPage';
 import FavDestinationsPage from '../pages/FavDestinationsPage';
 import DetailDestinationPage from '../pages/DetailDestinationPage';
+import SplashScreen from '../pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ const Route = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="SplashScreen"
         screenOptions={{
           headerShown: false,
           animation: 'none',
@@ -32,6 +34,7 @@ const Route = () => {
           name="DetailDestinationPage"
           component={DetailDestinationPage}
         />
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
