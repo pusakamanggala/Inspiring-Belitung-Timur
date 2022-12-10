@@ -69,7 +69,6 @@ const BottomBar = () => {
 
       <View style={styles.iconContainer}>
         <TouchableOpacity
-          style={{borderRadius: 20}}
           onPress={() => {
             navigation.navigate('Destinations');
           }}>
@@ -82,7 +81,6 @@ const BottomBar = () => {
 
       <View style={styles.iconContainer}>
         <TouchableOpacity
-          style={{borderRadius: 20}}
           onPress={() => {
             navigation.navigate('Informations');
           }}>
@@ -95,7 +93,6 @@ const BottomBar = () => {
 
       <View style={styles.iconContainer}>
         <TouchableOpacity
-          style={{borderRadius: 20}}
           onPress={() => {
             navigation.navigate('Others');
           }}>
@@ -121,8 +118,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   icon: {
+    height: '72%',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 
