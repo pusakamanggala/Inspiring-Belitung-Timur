@@ -9,6 +9,8 @@ import AboutPage from '../pages/AboutPage';
 import FavDestinationsPage from '../pages/FavDestinationsPage';
 import DetailDestinationPage from '../pages/DetailDestinationPage';
 import SplashScreen from '../pages/SplashScreen';
+import NewsDetailPage from '../pages/NewsDetailPage';
+import DestinationsMapPage from '../pages/DestinationsMapPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +36,12 @@ const Route = () => {
           name="DetailDestinationPage"
           component={DetailDestinationPage}
         />
+        <Stack.Screen name="NewsDetailPage" component={NewsDetailPage} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen
+          name="DestinationsMapPage"
+          component={DestinationsMapPage}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
