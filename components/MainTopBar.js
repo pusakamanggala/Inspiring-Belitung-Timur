@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Image, TextInput} from 'react-native';
+import {View, Image, TextInput, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const MainTopBar = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -33,7 +35,10 @@ const MainTopBar = () => {
           />
         </View>
         <View style={{flex: 1, alignItems: 'center'}}>
-          <Image source={require('../icons/TopBar/love.png')} />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('FavoriteDestinations')}>
+            <Image source={require('../icons/TopBar/love.png')} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
