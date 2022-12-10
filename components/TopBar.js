@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Touchable, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 const TopBar = props => {
@@ -39,7 +39,9 @@ const TopBar = props => {
           alignItems: 'center',
         }}>
         <Image style={{width: 20, height: 20}} source={props.path} />
-        <Image style={{width: 20, height: 20}} source={props.path2} />
+        <TouchableOpacity onPress={props.mapIconOnPress}>
+          <Image style={{width: 20, height: 20}} source={props.path2} />
+        </TouchableOpacity>
       </View>
     </View>
   );
