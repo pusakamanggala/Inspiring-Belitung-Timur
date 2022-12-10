@@ -3,14 +3,17 @@ import {View, Text, ScrollView} from 'react-native';
 import TopBar from '../components/TopBar';
 import DestinationsCard from '../components/DestinationCard';
 import BottomBar from '../components/BottomBar';
+import {useNavigation} from '@react-navigation/native';
 
 const DestinationsPage = () => {
+  const navigation = useNavigation();
   return (
     <View style={{backgroundColor: 'white'}}>
       <TopBar
         title="Destinasi"
         path={require('../icons/TopBar/search.png')}
         path2={require('../icons/TopBar/map.png')}
+        mapIconOnPress={() => navigation.navigate('DestinationsMapPage')}
       />
       <ScrollView horizontal={true} style={{height: '5%'}}>
         <View
