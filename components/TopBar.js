@@ -15,6 +15,7 @@ const TopBar = props => {
         alignItems: 'center',
         borderBottomWidth: 1.5,
         borderBottomColor: '#E0E0E0',
+        backgroundColor: 'white',
       }}>
       <View
         style={{

@@ -10,7 +10,12 @@ const InformationsPage = () => {
   return (
     <>
       <TopBar title="Informasi dan Berita" />
-      <ScrollView style={{paddingHorizontal: 20, height: '95%'}}>
+      <ScrollView
+        style={{
+          paddingHorizontal: 20,
+          height: '95%',
+          backgroundColor: 'white',
+        }}>
         <View style={{borderBottomWidth: 1.5, borderBottomColor: '#E0E0E0'}}>
           <NewsList
             onPress={() => navigation.navigate('NewsDetailPage')}

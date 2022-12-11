@@ -54,6 +54,7 @@ const BottomBar = () => {
         justifyContent: 'space-evenly',
         borderTopColor: 'rgba(158, 150, 150, 0.3)',
         borderTopWidth: 3,
+        backgroundColor: 'white',
       }}>
       <View style={styles.iconContainer}>
         <TouchableOpacity
