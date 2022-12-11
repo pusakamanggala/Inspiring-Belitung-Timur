@@ -73,7 +73,10 @@ const BottomBar = () => {
             navigation.navigate('Destinations');
           }}>
           <View style={styles.icon}>
-            <Image source={handleIconDestinations()} />
+            <Image
+              source={handleIconDestinations()}
+              style={{marginTop: '3%'}}
+            />
             <Text style={styles.iconTitle}>Destinasi</Text>
           </View>
         </TouchableOpacity>
