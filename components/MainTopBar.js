@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 
 const MainTopBar = () => {
   const navigation = useNavigation();
-  
+
   return (
     <View
       style={{
@@ -33,6 +33,7 @@ const MainTopBar = () => {
               color: 'black',
             }}
             placeholder={'Cari Wisata'}
+            placeholderTextColor="#9096A0"
           />
         </View>
         <View style={{flex: 1, alignItems: 'center'}}>
