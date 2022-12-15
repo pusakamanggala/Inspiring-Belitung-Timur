@@ -8,7 +8,7 @@ const OthersPage = () => {
   const navigation = useNavigation();
   return (
     <View>
-      <View style={{height: '90%'}}>
+      <View style={{height: '90%', backgroundColor: 'white'}}>
         <View
           style={{
             flexDirection: 'row',
