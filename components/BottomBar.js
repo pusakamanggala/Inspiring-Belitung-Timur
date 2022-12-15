@@ -1,47 +1,16 @@
 import React, {useEffect} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableHighlight,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 
 const BottomBar = () => {
   const navigation = useNavigation();
   const route = useRoute();
 
-  const handleIconHome = () => {
-    if (route.name === 'Home') {
-      return require('../icons/BottomBar/home_active.png');
+  const handleIcon = (routeName, passiveIconPath, activeIconPath) => {
+    if (route.name === routeName) {
+      return activeIconPath;
     } else {
-      return require('../icons/BottomBar/home.png');
-    }
-  };
-
-  const handleIconDestinations = () => {
-    if (route.name === 'Destinations') {
-      return require('../icons/BottomBar/destinations_active.png');
-    } else {
-      return require('../icons/BottomBar/destinations.png');
-    }
-  };
-
-  const handleIconInformations = () => {
-    if (route.name === 'Informations') {
-      return require('../icons/BottomBar/information_active.png');
-    } else {
-      return require('../icons/BottomBar/information.png');
-    }
-  };
-
-  const handleIconOthers = () => {
-    if (route.name === 'Others') {
-      return require('../icons/BottomBar/other_active.png');
-    } else {
-      return require('../icons/BottomBar/other.png');
+      return passiveIconPath;
     }
   };
 
@@ -62,7 +31,13 @@ const BottomBar = () => {
             navigation.navigate('Home');
           }}>
           <View style={styles.icon}>
-            <Image source={handleIconHome()} />
+            <Image
+              source={handleIcon(
+                'Home',
+                require('../icons/BottomBar/home.png'),
+                require('../icons/BottomBar/home_active.png'),
+              )}
+            />
             <Text style={styles.iconTitle}>Beranda</Text>
           </View>
         </TouchableOpacity>
@@ -75,7 +50,11 @@ const BottomBar = () => {
           }}>
           <View style={styles.icon}>
             <Image
-              source={handleIconDestinations()}
+              source={handleIcon(
+                'Destinations',
+                require('../icons/BottomBar/destinations.png'),
+                require('../icons/BottomBar/destinations_active.png'),
+              )}
               style={{marginTop: '3%'}}
             />
             <Text style={styles.iconTitle}>Destinasi</Text>
@@ -89,7 +68,13 @@ const BottomBar = () => {
             navigation.navigate('Informations');
           }}>
           <View style={styles.icon}>
-            <Image source={handleIconInformations()} />
+            <Image
+              source={handleIcon(
+                'Informations',
+                require('../icons/BottomBar/information.png'),
+                require('../icons/BottomBar/information_active.png'),
+              )}
+            />
             <Text style={styles.iconTitle}>Informasi</Text>
           </View>
         </TouchableOpacity>
@@ -101,7 +86,13 @@ const BottomBar = () => {
             navigation.navigate('Others');
           }}>
           <View style={styles.icon}>
-            <Image source={handleIconOthers()} />
+            <Image
+              source={handleIcon(
+                'Others',
+                require('../icons/BottomBar/other.png'),
+                require('../icons/BottomBar/other_active.png'),
+              )}
+            />
             <Text style={styles.iconTitle}>Lainnya</Text>
           </View>
         </TouchableOpacity>
