@@ -24,7 +24,6 @@ const BottomBar = () => {
         borderTopColor: 'rgba(158, 150, 150, 0.3)',
         borderTopWidth: 3,
         backgroundColor: 'white',
-        paddingTop: '2%',
       }}>
       <View style={styles.iconContainer}>
         <TouchableOpacity
